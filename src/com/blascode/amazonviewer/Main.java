@@ -12,9 +12,9 @@ public class Main {
 	
 
 		
-		Movie movie = new Movie("b Coco","Animacion",(short)2017);
-		movie.setTitle("Rambo");
-		movie.showData();
+//		Movie movie = new Movie("b Coco","Animacion",(short)2017);
+//		movie.setTitle("Rambo");
+		//movie.showData();
 		// showMenu();
 
 	
