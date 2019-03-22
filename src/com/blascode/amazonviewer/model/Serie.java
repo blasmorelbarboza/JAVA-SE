@@ -1,5 +1,6 @@
 package com.blascode.amazonviewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Serie extends Film implements IVisualilizable{
@@ -8,7 +9,7 @@ public class Serie extends Film implements IVisualilizable{
 
 //	private int timeViewed;
 	private int sessionQuantity;
-	private  Chapter[] chapter;
+	private  ArrayList<Chapter> chapters;
 
 	
 	public Serie(String title, String genre, String creator, int duration , int sessionQuantity) {
@@ -34,13 +35,13 @@ public class Serie extends Film implements IVisualilizable{
 	}
 
 
-	public Chapter[] getChapter() {
-		return chapter;
+	public ArrayList<Chapter> getChapter() {
+		return chapters;
 	}
 
 
-	public void setChapter(Chapter[] chapter) {
-		this.chapter = chapter;
+	public void setChapter(ArrayList<Chapter> chapter) {
+		this.chapters = chapter;
 	}
 
 @Override

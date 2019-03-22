@@ -1,5 +1,6 @@
 package com.blascode.amazonviewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Movie extends Film implements IVisualilizable {
@@ -55,4 +56,19 @@ public class Movie extends Film implements IVisualilizable {
 		}
 		
 	}
+	public static ArrayList<Movie> makeMoviesList(){
+		ArrayList<Movie> movies = new ArrayList();
+		
+		
+		
+		for (int i = 0; i <= 5; i++) {
+			movies.add(new Movie("Movie"+ i,"Genero"+ i,"Creador", 120+i,(short)(2017+i) ));			
+		}
+		
+		
+		return movies;
+	} 
+	
+	
+	
 }

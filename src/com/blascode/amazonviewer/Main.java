@@ -1,5 +1,6 @@
 package com.blascode.amazonviewer;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.blascode.amazonviewer.model.Movie;
@@ -78,12 +79,22 @@ public class Main {
 	}
 	
 	public static void showMovies(){
-		int exit=1;
+		int exit=0;
+		ArrayList<Movie> movies = Movie.makeMoviesList();
+		
 		do {
 			System.out.println();
 			System.out.println("::Movies::");
 			System.out.println();
-			exit=0;
+			for (int i = 0; i < movies.size(); i++) {
+				System.out.println(i+1 +". "+ movies.get(i).getTitle() + " Visto: "+ movies.get(i).isViewed());
+				
+			}		
+			
+			System.out.println("0. Regresar al Menu");
+			System.out.println(" ");
+
+
 		} while (exit !=0);
 	}
 	public static void showSeries(){
