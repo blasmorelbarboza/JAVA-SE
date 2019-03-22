@@ -16,7 +16,8 @@ public class Main {
 //		movie.setTitle("Rambo");
 		//movie.showData();
 		// showMenu();
-
+		Movie movie = new Movie("Coco","Animacion","",120,(short)2017);
+		System.out.println(movie.toString());
 	
 	}
 	

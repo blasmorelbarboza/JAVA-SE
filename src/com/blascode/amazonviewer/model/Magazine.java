@@ -29,6 +29,10 @@ public class Magazine extends Publication {
 		this.id = id;
 	}
 
-	
+@Override
+public String toString() {
+	return "::: MAGAZINE ::: "+
+	"TITLE: "+ getTitle() ;
+}	
 	
 }

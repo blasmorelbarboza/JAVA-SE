@@ -9,6 +9,8 @@ public class Film {
 	private short year;
 	private boolean viewed;
 	
+	//private int timeViewed;
+	
 	
 	
 	public Film(String title, String genre, String creator, int duration) {
