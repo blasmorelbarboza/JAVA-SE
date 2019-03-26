@@ -1,5 +1,6 @@
 package com.blascode.amazonviewer.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Book extends Publication implements IVisualilizable {
@@ -62,5 +63,19 @@ public class Book extends Publication implements IVisualilizable {
 	public void setTimeReaded(int timeReaded) {
 		this.timeReaded = timeReaded;
 	}
+	
+	/*  // reto Implement Generador Book 
+	public static ArrayList<Book> makeBooKList(){
+		ArrayList<Book>book = new ArrayList();
+		
+		
+		
+		for (int i = 0; i <= 5; i++) {
+			book.add(new Book("Libro"+ i,"fecEditorial"+ i,"Creador" ));			
+		}
+		
+		
+		return book;
+	}*/
 
 }
