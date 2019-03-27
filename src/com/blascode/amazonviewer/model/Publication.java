@@ -3,12 +3,11 @@ package com.blascode.amazonviewer.model;
 import java.util.Date;
 
 public class Publication {
-
+	
 	private String title;
 	private Date edititionDate;
 	private String editorial;
 	private String[] authors;
-	
 	
 	
 	public Publication(String title, Date edititionDate, String editorial) {
@@ -16,9 +15,8 @@ public class Publication {
 		this.title = title;
 		this.edititionDate = edititionDate;
 		this.editorial = editorial;
-		
 	}
-
+	
 	
 	public String getTitle() {
 		return title;
@@ -44,9 +42,7 @@ public class Publication {
 	public void setAuthors(String[] authors) {
 		this.authors = authors;
 	}
+	
+	
 
-
-	
-	
-	
 }
