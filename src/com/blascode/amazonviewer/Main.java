@@ -23,7 +23,7 @@ public class Main {
 			
 			System.out.println("BIENVENIDOS AMAZON VIEWER");
 			System.out.println("");
-			System.out.println("Selecciona el número de la opción deseada");
+			System.out.println("Selecciona el numero de la opcion deseada");
 			System.out.println("1. Movies");
 			System.out.println("2. Series");
 			System.out.println("3. Books");
@@ -39,7 +39,7 @@ public class Main {
 			switch (response) {
 				case 0:
 					//salir
-					
+					exit = 0;
 					break;
 				case 1:
 					showMovies();
@@ -63,7 +63,7 @@ public class Main {
 	
 				default:
 					System.out.println();
-					System.out.println("....¡¡Selecciona una opción!!....");
+					System.out.println("....��Selecciona una opcion!!....");
 					System.out.println();
 					break;
 			}
