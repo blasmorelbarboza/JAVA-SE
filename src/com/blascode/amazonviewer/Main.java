@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+import com.blascode.amazonviewer.model.Chapter;
 import com.blascode.amazonviewer.model.Movie;
+import com.blascode.amazonviewer.model.Serie;
+
 
 public class Main {
 
@@ -12,7 +15,7 @@ public class Main {
 		System.out.println("Hola Gente");
 	
 		showMenu();
-	
+		
 	}
 	
 	public static void showMenu()
@@ -32,15 +35,15 @@ public class Main {
 			System.out.println("0. Exit");
 
 			// Leer la respuesta del usuario
-			Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 			int response = Integer.valueOf(sc.nextLine());
 
 			// int response = 1;
 			switch (response) {
 			case 0:
 				// salir
-				System.out.println("....¡¡SALISTE.. volver al menu principal!!....");
-				showMenu();
+				System.out.println("....¡¡SALISTE.. !!....");
+				exit = 0;
 
 				break;
 			case 1:
@@ -89,26 +92,25 @@ public class Main {
 			
 			System.out.println("0. Regresar al Menu");
 			System.out.println(" ");
-			
+	
 			
 			// leer respuesta Usuario para pelicula
-			Scanner sc= new Scanner(System.in);
+			Scanner sc = new Scanner(System.in);
 			int response = Integer.valueOf(sc.nextLine());
+
 			
-/*			if(response == 0) {
+			if(response == 0) {
 				showMenu();
-			} //Comentado Por BM  */ 
+			}     
 			
 			Movie movieSelected = movies.get(response-1);
 			movieSelected.setViewed(true);
 			Date dateI= movieSelected.startToSee(new Date());
 			
 			
-			for (int i = 0; i < 3; i++) {
-				
-				System.out.println(".;:._.;:._.;:._.;:._.;:._.;:.");
-				
-			}
+			for (int i = 0; i < 10; i++) {			
+				System.out.println(".;:._.;:._.;:.MOVIESSSSS_.;:._.;:._.;:.");
+				}
 			
 			// termino verla
 			 movieSelected.stopToSee(dateI, new Date());
@@ -122,19 +124,89 @@ public class Main {
 	}  // fin showMovies
 	
 	public static void showSeries(){
-		int exit=0;
+		int exit=1;
+		ArrayList<Serie> series = Serie.makeSerieList();	
 		do {
 			System.out.println();
 			System.out.println("::showSeries::");
 			System.out.println();
+			
+			
+			for (int i = 0; i < series.size(); i++) {
+				System.out.println(i+1 +". "+ series.get(i).getTitle() + " Visto: "+ series.get(i).isViewed());			
+			}
+			
+			
+			System.out.println("0. Regresar al Menu");
+			System.out.println(" ");
+			
+			// leer respuesta Usuario para SERIES
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			
+			if(response == 0) {
+				showMenu();
+			}
+			
+			showChapters(series.get(response-1).getChapters());
+			//showChapters(series.get(response-1));
+						
+
+			
 		} while (exit !=0);
 	}
-	public static void showChapters(){
+	public static void showChapters(ArrayList<Chapter> chaptersOfSerieSelected){
 		int exit=0;
 		do {
 			System.out.println();
 			System.out.println("::showChapters::");
 			System.out.println();
+			
+			for (int i = 0; i < chaptersOfSerieSelected.size(); i++) { //1. Chapter 1
+				System.out.println(i+1 + ". " + chaptersOfSerieSelected.get(i).getTitle() + " Visto: " + chaptersOfSerieSelected.get(i).isViewed());
+			}
+			
+			System.out.println("0. Regresar al Menu");
+			System.out.println();
+			
+			//Leer Respuesta usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			
+			if(response == 0) {
+				showSeries();
+			}
+			
+			Chapter chapterSelected = chaptersOfSerieSelected.get(response-1);
+			chapterSelected.setViewed(true);
+			Date dateI = chapterSelected.startToSee(new Date());
+			
+			for (int i = 0; i < 10; i++) {
+				System.out.println(".;:._.;:._.;:.CAPITULOS_.;:._.;:._.;:.");
+			}
+			
+			//Termine de verla
+			chapterSelected.stopToSee(dateI, new Date());
+			System.out.println();
+			System.out.println("Viste: " + chapterSelected);
+			System.out.println("Por: " + chapterSelected.getTimeViewed() + " milisegundos");
+			
+			/*
+			Serie serieSelected = series.get(response-1);
+			serieSelected.setViewed(true);
+			Date dateI= serieSelected.startToSee(new Date());
+			
+			for (int i = 0; i < 10; i++) {				
+				System.out.println(".;:._.;:._.;:.SERIESSSSS_.;:._.;:._.;:.");
+			}
+			
+			// termino verla
+			serieSelected.stopToSee(dateI, new Date());
+			 System.out.println("Viste  ");
+			 System.out.println(serieSelected);
+			 //System.out.println("por "+ serieSelected.getTimeViewed()+ "milisegundos" );
+			 System.out.println("Viste  ");*/
+			
 		} while (exit !=0);
 	}
 	public static void showBooks(){
