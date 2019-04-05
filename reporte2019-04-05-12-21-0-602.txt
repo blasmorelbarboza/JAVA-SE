@@ -1,3 +1,6 @@
+Date: vie, 1 abr 2019
+
+
 
  :: MOVIE ::
  Title: Movie 1
@@ -12,3 +15,11 @@
  Year: 2019
  Creator: Creador 2
  Duration: 122
+
+ :: SERIE ::
+ Title: Serie 1
+ :: CHAPTER ::
+ Title: Capituo 2
+ Year: 2019
+ Creator: creator2
+ Duration: 45
