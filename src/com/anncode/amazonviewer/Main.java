@@ -60,6 +60,9 @@ public class Main {
 				case 5:
 					makeReport();
 					exit = 1;
+					//exit = 1;
+					
+					
 					break;
 				case 6:
 					//Date date = new Date();
