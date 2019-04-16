@@ -44,7 +44,7 @@ public class Main {
 			
 			System.out.println("BIENVENIDOS AMAZON VIEWER");
 			System.out.println("");
-			System.out.println("Selecciona el nÃºmero de la opciÃ³n deseada");
+			System.out.println("Selecciona el nùmero de la opción deseada");
 			System.out.println("1. Movies");
 			System.out.println("2. Series");
 			System.out.println("3. Books");
