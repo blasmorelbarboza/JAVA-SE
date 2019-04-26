@@ -2,3 +2,5 @@ ARCHIVO DE PRUEbA
 1- LO MODIFIQUE
 2-volvi a modificar desde EL REMOTO , agrege la extension del archivo
 3-PREPARAR git pull origin(remoto) master
+
+5-MODIFICANDO DESDE EL REMOTO
